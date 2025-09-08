@@ -1,0 +1,203 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  primaryCta?: {
+    text: string;
+    href: string;
+    icon?: string;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+    icon?: string;
+  };
+  features?: Array<{
+    icon: string;
+    text: string;
+  }>;
+  note?: string;
+  background?: 'gradient' | 'primary' | 'secondary' | 'light' | 'white' | 'image';
+  backgroundImage?: string;
+  show?: boolean;
+}
+
+const {
+  title = "Ready to Transform Your Home?",
+  subtitle = "Get a free estimate for your home improvement project today",
+  primaryCta = {
+    text: "Get Free Estimate",
+    href: "/contact",
+    icon: "request_quote"
+  },
+  secondaryCta = {
+    text: "Call (864) 608-3326",
+    href: "tel:+18646083326",
+    icon: "phone"
+  },
+  features = [
+    { icon: "schedule", text: "Fast Response" },
+    { icon: "verified", text: "Licensed & Insured" },
+    { icon: "handshake", text: "Satisfaction Guaranteed" }
+  ],
+  note = "Serving homeowners throughout Upstate South Carolina",
+  background = 'gradient',
+  backgroundImage = "/images/modern-kitchen-remodel.jpeg",
+  show = true
+} = Astro.props;
+
+if (!show) {
+  return null;
+}
+---
+
+<section 
+  class={`cta-section section py-16 text-center cta-${background}`}
+  style={background === 'image' ? `background-image: linear-gradient(rgba(101, 67, 33, 0.8), rgba(139, 69, 19, 0.7)), url('${backgroundImage}'); background-size: cover; background-position: center;` : ''}
+>
+  <div class="container">
+    <div class="cta-content">
+      <h2>{title}</h2>
+      <p class="cta-subtitle">{subtitle}</p>
+      
+      <div class="cta-buttons">
+        <a href={primaryCta.href} class="btn btn--gold btn--large">
+          {primaryCta.icon && <span class="material-icons btn-icon">{primaryCta.icon}</span>}
+          {primaryCta.text}
+        </a>
+        <a href={secondaryCta.href} class="btn btn--primary btn--large">
+          {secondaryCta.icon && <span class="material-icons btn-icon">{secondaryCta.icon}</span>}
+          {secondaryCta.text}
+        </a>
+      </div>
+      
+      {features && features.length > 0 && (
+        <div class="cta-features">
+          {features.map((feature) => (
+            <div class="cta-feature">
+              <span class="material-icons">{feature.icon}</span>
+              <span>{feature.text}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      
+      {note && <p class="cta-note">{note}</p>}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-section {
+    color: var(--white);
+  }
+  
+  .cta-gradient {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
+  }
+  
+  .cta-primary {
+    background: var(--primary-brown);
+  }
+  
+  .cta-secondary {
+    background: var(--secondary-brown);
+  }
+  
+  .cta-light {
+    background: var(--light-gray);
+    color: var(--text-primary);
+  }
+  
+  .cta-white {
+    background: var(--white);
+    color: var(--text-primary);
+  }
+  
+  .cta-image {
+    color: var(--white);
+    position: relative;
+  }
+  
+  .cta-section * {
+    color: inherit;
+  }
+  
+  .cta-light *,
+  .cta-white * {
+    color: var(--text-primary) !important;
+  }
+  
+  .cta-content h2 {
+    color: inherit;
+    margin-bottom: var(--space-md);
+  }
+  
+  .cta-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .btn--large {
+    padding: var(--space-btn-large-v) var(--space-btn-large-h);
+    font-size: 1.125rem;
+    min-width: 200px;
+  }
+  
+  .btn-icon {
+    margin-right: var(--space-sm);
+    font-size: 1.2rem;
+  }
+  
+  .cta-features {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0 var(--space-lg);
+    flex-wrap: wrap;
+  }
+  
+  .cta-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    opacity: 0.9;
+  }
+  
+  .cta-feature .material-icons {
+    font-size: 1.2rem;
+  }
+  
+  .cta-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn--large {
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    .cta-features {
+      flex-direction: column;
+      gap: var(--space-md);
+      align-items: center;
+    }
+  }
+</style>

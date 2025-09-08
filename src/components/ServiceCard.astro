@@ -1,0 +1,145 @@
+---
+// ServiceCard component for displaying service information
+export interface Props {
+  title: string;
+  description: string;
+  icon: string;
+  services: string[];
+  href?: string;
+}
+
+const { title, description, icon, services, href = '/services' } = Astro.props;
+---
+
+<div class="service-card">
+  <div class="service-card__icon">
+    <span class="material-icons">{icon}</span>
+  </div>
+  
+  <h3 class="service-card__title">{title}</h3>
+  <p class="service-card__description">{description}</p>
+  
+  <ul class="service-card__list">
+    {services.map(service => (
+      <li class="service-card__item">{service}</li>
+    ))}
+  </ul>
+  
+  <a href={href} class="service-card__link">Learn More</a>
+</div>
+
+<style>
+  .service-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+  }
+  
+  .service-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+    border-color: var(--accent-gold);
+  }
+  
+  .service-card__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+    background: linear-gradient(135deg, var(--accent-gold), var(--hover-gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .service-card__icon .material-icons {
+    font-size: 2.5rem;
+    color: var(--white);
+  }
+  
+  .service-card__title {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-md);
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .service-card__description {
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+  
+  .service-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-lg) 0;
+    text-align: left;
+  }
+  
+  .service-card__item {
+    color: var(--text-light);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-lg);
+    position: relative;
+    font-size: 0.9rem;
+  }
+  
+  .service-card__item::before {
+    content: 'check_circle';
+    font-family: 'Material Icons';
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+    font-weight: normal;
+    font-size: 1.2rem;
+  }
+  
+  .service-card__item:last-child {
+    margin-bottom: 0;
+  }
+  
+  .service-card__link {
+    display: inline-block;
+    color: var(--primary-brown);
+    text-decoration: none;
+    font-weight: 600;
+    padding: var(--space-sm) var(--space-lg);
+    border: 2px solid var(--primary-brown);
+    border-radius: 6px;
+    transition: all var(--transition-normal);
+    margin-top: auto;
+  }
+  
+  .service-card__link:hover {
+    background-color: var(--primary-brown);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .service-card {
+      padding: var(--space-lg);
+    }
+    
+    .service-card__icon {
+      width: 60px;
+      height: 60px;
+      font-size: 2rem;
+    }
+    
+    .service-card__title {
+      font-size: 1.25rem;
+    }
+  }
+</style>

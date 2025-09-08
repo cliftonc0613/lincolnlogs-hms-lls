@@ -1,0 +1,135 @@
+---
+export interface Props {
+  items?: Array<{
+    label: string;
+    href?: string;
+  }>;
+  currentPage?: string;
+  show?: boolean;
+}
+
+const { 
+  items = [],
+  currentPage = "",
+  show = true 
+} = Astro.props;
+
+// If no items provided, create default breadcrumb with current page
+const breadcrumbItems = items.length > 0 
+  ? items 
+  : [
+      { label: "Home", href: "/" },
+      { label: currentPage }
+    ];
+
+if (!show) {
+  return null;
+}
+---
+
+<nav class="default-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list">
+      {breadcrumbItems.map((item, index) => (
+        <li class="breadcrumb-item">
+          {item.href ? (
+            <a href={item.href} class="breadcrumb-link">
+              {item.label.toLowerCase() === 'home' && (
+                <span class="material-icons home-icon">home</span>
+              )}
+              {item.label}
+            </a>
+          ) : (
+            <span class="breadcrumb-current" aria-current="page">
+              {item.label.toLowerCase() === 'home' && (
+                <span class="material-icons home-icon">home</span>
+              )}
+              {item.label}
+            </span>
+          )}
+          {index < breadcrumbItems.length - 1 && (
+            <span class="breadcrumb-separator">
+              <span class="material-icons">chevron_right</span>
+            </span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>
+
+<style>
+  .default-breadcrumb {
+    background: var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    padding: var(--space-md) 0;
+  }
+  
+  .breadcrumb-list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+  
+  .breadcrumb-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition-fast);
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-link:hover {
+    color: var(--hover-gold);
+  }
+  
+  .breadcrumb-current {
+    color: var(--primary-brown);
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .breadcrumb-separator {
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+  }
+  
+  .breadcrumb-separator .material-icons {
+    font-size: 1rem !important;
+  }
+  
+  .home-icon {
+    font-size: 0.9rem !important;
+    margin-right: var(--space-xs);
+  }
+  
+  @media (max-width: 768px) {
+    .default-breadcrumb {
+      padding: var(--space-sm) 0;
+    }
+    
+    .breadcrumb-list {
+      justify-content: center;
+    }
+    
+    .breadcrumb-link,
+    .breadcrumb-current {
+      font-size: 0.8rem;
+    }
+  }
+</style>

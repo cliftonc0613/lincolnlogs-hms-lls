@@ -1,0 +1,493 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroDefault from '../components/HeroDefault.astro';
+import DefaultBreadcrumb from '../components/DefaultBreadcrumb.astro';
+import ServiceAreas from '../components/ServiceAreas.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Contact Upstate Home Remodel | Jeffery Lincoln | Free Estimates"
+  description="Contact Jeffery Lincoln at Upstate Home Remodel for your home improvement project. Call (864) 608-3326 for free estimates on carpentry, plumbing, electrical, and general remodeling services."
+  keywords="contact Upstate Home Remodel, Jeffery Lincoln contact, free estimate, home remodeling quote, Upstate South Carolina contractor, phone number"
+>
+  <Navigation />
+  
+  <main>
+    <!-- ===== CONTACT HERO SECTION ===== -->
+    <!-- Introduction and overview of contact information -->
+    <HeroDefault 
+      title="Get Your Free Estimate Today"
+      subtitle="Contact Upstate Home Remodel"
+      description="Ready to transform your home? Contact Jeffery Lincoln for professional carpentry, plumbing, electrical, and remodeling services throughout Upstate South Carolina."
+    />
+    
+    <!-- ===== BREADCRUMB NAVIGATION ===== -->
+    <!-- Page navigation breadcrumb -->
+    <DefaultBreadcrumb currentPage="Contact" />
+    
+    <!-- ===== CONTACT INFORMATION SECTION ===== -->
+    <!-- Main contact section with contact details and information -->
+    <section class="contact-main-section section">
+      <div class="container">
+        <div class="contact-content-grid">
+          <!-- Contact Information Cards -->
+          <div class="contact-info-sidebar">
+            
+            <!-- Primary Contact Card -->
+            <div class="info-card primary-contact">
+              <div class="card-icon">
+                <span class="material-icons">phone</span>
+              </div>
+              <h3>Call Now</h3>
+              <a href="tel:+18646083326" class="contact-phone">(864) 608-3326</a>
+              <p>Available 7 Days a Week<br/>Emergency Services 24/7</p>
+              <div class="contact-actions">
+                <a href="tel:+18646083326" class="btn btn--primary btn--small">
+                  <span class="material-icons">phone</span>
+                  Call Now
+                </a>
+                <a href="sms:+18646083326" class="btn btn--outline btn--small">
+                  <span class="material-icons">message</span>
+                  Text Us
+                </a>
+              </div>
+            </div>
+            
+            <!-- Business Hours -->
+            <div class="info-card">
+              <div class="card-icon">
+                <span class="material-icons">schedule</span>
+              </div>
+              <h3>Business Hours</h3>
+              <div class="hours-list">
+                <div class="hours-item">
+                  <span class="day">Monday - Friday</span>
+                  <span class="time">7:00 AM - 6:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span class="day">Saturday</span>
+                  <span class="time">8:00 AM - 4:00 PM</span>
+                </div>
+                <div class="hours-item">
+                  <span class="day">Sunday</span>
+                  <span class="time">Emergency Only</span>
+                </div>
+              </div>
+              <div class="emergency-note">
+                <span class="material-icons">warning</span>
+                <span>Emergency repairs available 24/7</span>
+              </div>
+            </div>
+            
+            
+            <!-- Why Choose Us - Card 1: Licensed & Expert -->
+            <div class="info-card">
+              <div class="card-icon">
+                <span class="material-icons">verified</span>
+              </div>
+              <h3>Licensed & Expert</h3>
+              <p>Fully licensed and insured contractor with expert craftsmanship in all trades.</p>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <span class="material-icons">verified</span>
+                  <span>Licensed & Insured</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="material-icons">handyman</span>
+                  <span>Expert Craftsmanship</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Why Choose Us - Card 2: Fast & Reliable -->
+            <div class="info-card">
+              <div class="card-icon">
+                <span class="material-icons">schedule</span>
+              </div>
+              <h3>Fast & Reliable</h3>
+              <p>Quick response times and reliable service you can count on for all your home improvement needs.</p>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <span class="material-icons">schedule</span>
+                  <span>Quick Response</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="material-icons">access_time</span>
+                  <span>On-Time Service</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Why Choose Us - Card 3: Quality & Value -->
+            <div class="info-card">
+              <div class="card-icon">
+                <span class="material-icons">thumb_up</span>
+              </div>
+              <h3>Quality & Value</h3>
+              <p>Free estimates with satisfaction guaranteed on every project, big or small.</p>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <span class="material-icons">money_off</span>
+                  <span>Free Estimates</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="material-icons">thumb_up</span>
+                  <span>Satisfaction Guaranteed</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Contact Methods -->
+            <div class="info-card">
+              <div class="card-icon">
+                <span class="material-icons">contact_support</span>
+              </div>
+              <h3>Other Ways to Reach Us</h3>
+              <div class="contact-methods">
+                <a href="mailto:info@lincolnlogshms.com" class="contact-method">
+                  <span class="material-icons">email</span>
+                  <div class="method-info">
+                    <span class="method-type">Email</span>
+                    <span class="method-detail">info@lincolnlogshms.com</span>
+                  </div>
+                </a>
+                <a href="sms:+18646083326" class="contact-method">
+                  <span class="material-icons">message</span>
+                  <div class="method-info">
+                    <span class="method-type">Text Message</span>
+                    <span class="method-detail">(864) 608-3326</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICE AREAS SECTION ===== -->
+    <!-- Display service areas with location icons and contact information -->
+    <ServiceAreas showCta={false} />
+
+    <!-- ===== CALL TO ACTION SECTION ===== -->
+    <!-- Final conversion section encouraging customers to contact Upstate Home Remodel -->
+    <CtaSection 
+      title="Ready to Get Started?"
+      background="gradient"
+    />
+  </main>
+  
+  <Footer />
+</Layout>
+
+
+<style>
+  /* ===== CONTACT MAIN SECTION ===== */
+  .contact-content-grid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* ===== CONTACT INFO SIDEBAR ===== */
+  .contact-info-sidebar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .info-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--light-gray);
+    transition: all var(--transition-normal);
+  }
+  
+  .info-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .primary-contact {
+    border: 2px solid var(--accent-gold);
+    background: linear-gradient(135deg, var(--white) 0%, #fefdf9 100%);
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+  }
+  
+  .card-icon .material-icons {
+    font-size: 1.75rem !important;
+    color: var(--white);
+  }
+  
+  .info-card h3 {
+    color: var(--primary-brown);
+    text-align: center;
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+  }
+  
+  .contact-phone {
+    display: block;
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+    text-decoration: none;
+    margin-bottom: var(--space-sm);
+    transition: color var(--transition-normal);
+  }
+  
+  .contact-phone:hover {
+    color: var(--hover-gold);
+  }
+  
+  .info-card p {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: var(--space-lg);
+    line-height: 1.5;
+  }
+  
+  .contact-actions {
+    display: flex;
+    gap: var(--space-sm);
+  }
+  
+  .btn--small {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 0.9rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+  
+  .hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+  
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--light-gray);
+  }
+  
+  .hours-item:last-child {
+    border-bottom: none;
+  }
+  
+  .day {
+    font-weight: 600;
+    color: var(--primary-brown);
+    font-size: 0.95rem;
+  }
+  
+  .time {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+  }
+  
+  .emergency-note {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    background: rgba(220, 38, 38, 0.05);
+    border-radius: 6px;
+    border-left: 3px solid #dc2626;
+  }
+  
+  .emergency-note .material-icons {
+    font-size: 1.125rem !important;
+    color: #dc2626;
+  }
+  
+  .emergency-note span:last-child {
+    color: #dc2626;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .service-areas-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xs);
+    margin-top: var(--space-md);
+  }
+  
+  .service-areas-list li {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-left: var(--space-md);
+    position: relative;
+  }
+  
+  .service-areas-list li:before {
+    content: '•';
+    color: var(--accent-gold);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+  }
+  
+  .benefit-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .benefit-item .material-icons {
+    font-size: 1.25rem !important;
+    color: var(--accent-gold);
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm);
+    border-radius: 6px;
+    transition: background-color var(--transition-normal);
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .contact-method:hover {
+    background: var(--light-gray);
+  }
+  
+  .contact-method .material-icons {
+    font-size: 1.5rem !important;
+    color: var(--accent-gold);
+  }
+  
+  .method-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .method-type {
+    font-weight: 600;
+    color: var(--primary-brown);
+    font-size: 0.9rem;
+  }
+  
+  .method-detail {
+    color: var(--text-light);
+    font-size: 0.85rem;
+  }
+
+  /* ===== RESPONSIVE DESIGN ===== */
+  @media (max-width: 1024px) {
+    .contact-content-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+    
+    .contact-info-sidebar {
+      position: static;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-lg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form-container {
+      padding: var(--space-xl);
+    }
+    
+    .form-header h2 {
+      font-size: 1.5rem;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .info-card {
+      padding: var(--space-lg);
+    }
+    
+    .card-icon {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .card-icon .material-icons {
+      font-size: 1.5rem !important;
+    }
+    
+    .contact-phone {
+      font-size: 1.5rem;
+    }
+    
+    .contact-actions {
+      flex-direction: column;
+    }
+    
+    .service-areas-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-info-sidebar {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-form-container {
+      padding: var(--space-lg);
+    }
+    
+    .submit-btn {
+      font-size: 1rem;
+      padding: var(--space-md) var(--space-lg);
+    }
+  }
+</style>

@@ -1,0 +1,309 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroModern from '../components/HeroModern.astro';
+import ServiceOverviewNew from '../components/ServiceOverviewNew.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+
+// Ensure global CSS is included
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Upstate Home Remodel | Professional Home Improvement Services in Upstate SC"
+  description="Professional home remodeling services by Jeffery Lincoln. Carpentry, plumbing, electrical, and general remodeling throughout Upstate South Carolina. Licensed and insured."
+  keywords="home remodeling, carpentry, plumbing, electrical, Upstate South Carolina, Jeffery Lincoln, renovation, home improvement, contractor"
+>
+  <Navigation />
+  
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <!-- Modern full-screen hero introducing Upstate Home Remodel services -->
+    <HeroModern />
+    
+    <!-- ===== SERVICES OVERVIEW SECTION ===== -->
+    <!-- Display of core home improvement services offered -->
+    <ServiceOverviewNew showTitle={true} />
+    
+    <!-- ===== WHY CHOOSE US SECTION ===== -->
+    <!-- Key differentiators and trust building elements -->
+    <section class="homepage-why-choose section py-16" style="background: var(--light-gray);">
+      <div class="container">
+        <div class="text-center mb-xl">
+          <h2>Why Choose Upstate Home Remodel?</h2>
+          <p class="section-subtitle">Experience, quality, and trust you can count on</p>
+        </div>
+        
+        <div class="grid why-choose-grid">
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">engineering</span>
+            </div>
+            <h3 class="feature-card__title">Expert Craftsmanship</h3>
+            <p>Jeffery Lincoln brings extensive experience in carpentry, plumbing, electrical work, and general remodeling to every project.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">security</span>
+            </div>
+            <h3 class="feature-card__title">Licensed & Insured</h3>
+            <p>Full licensing and insurance coverage provides peace of mind and protection for your property and investment.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">emoji_events</span>
+            </div>
+            <h3 class="feature-card__title">Customer Satisfaction</h3>
+            <p>Dedicated to exceeding expectations and ensuring complete satisfaction with every completed project.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">high_quality</span>
+            </div>
+            <h3 class="feature-card__title">Quality Results</h3>
+            <p>Attention to detail and commitment to excellence ensures every project meets the highest standards of quality.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">support_agent</span>
+            </div>
+            <h3 class="feature-card__title">Reliable Service</h3>
+            <p>Dependable communication and timely project completion you can trust for your home improvement needs.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">location_on</span>
+            </div>
+            <h3 class="feature-card__title">Local Expertise</h3>
+            <p>Deep knowledge of Upstate South Carolina homes and building codes ensures compliant, quality work.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===== PORTFOLIO PREVIEW SECTION ===== -->
+    <!-- Showcase of recent completed projects -->
+    <section class="homepage-portfolio section py-16">
+      <div class="container">
+        <div class="text-center mb-xl">
+          <h2>Recent Projects</h2>
+          <p class="section-subtitle">See the quality craftsmanship that sets us apart</p>
+        </div>
+        
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <span class="material-icons portfolio-placeholder">image</span>
+            </div>
+            <div class="portfolio-content">
+              <h3>Kitchen Renovation</h3>
+              <p>Complete kitchen remodel with custom cabinets and modern fixtures</p>
+              <span class="project-type">Carpentry & Plumbing</span>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <span class="material-icons portfolio-placeholder">image</span>
+            </div>
+            <div class="portfolio-content">
+              <h3>Bathroom Renovation</h3>
+              <p>Master bathroom transformation with tile work and modern plumbing</p>
+              <span class="project-type">General Remodel</span>
+            </div>
+          </div>
+          
+          <div class="portfolio-item">
+            <div class="portfolio-image">
+              <span class="material-icons portfolio-placeholder">image</span>
+            </div>
+            <div class="portfolio-content">
+              <h3>Electrical Upgrade</h3>
+              <p>Panel upgrade and smart home lighting installation</p>
+              <span class="project-type">Electrical Services</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-xl">
+          <a href="/gallery" class="btn btn--outline btn--large">View All Projects</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===== SERVICE AREAS SECTION ===== -->
+    <!-- Geographic coverage and local expertise -->
+    <section class="homepage-service-areas section py-16" style="background: var(--light-gray);">
+      <div class="container">
+        <div class="text-center mb-xl">
+          <h2>Serving Upstate South Carolina</h2>
+          <p class="section-subtitle">Professional home improvement services throughout the region</p>
+        </div>
+        
+        <div class="areas-grid">
+          <div class="area-card">
+            <span class="material-icons">location_city</span>
+            <h3>Greenville</h3>
+            <p>Complete home renovations and remodeling services in Greenville and surrounding areas.</p>
+          </div>
+          
+          <div class="area-card">
+            <span class="material-icons">location_city</span>
+            <h3>Spartanburg</h3>
+            <p>Expert carpentry, plumbing, and electrical work throughout Spartanburg County.</p>
+          </div>
+          
+          <div class="area-card">
+            <span class="material-icons">location_city</span>
+            <h3>Anderson</h3>
+            <p>Trusted home improvement contractor serving Anderson and the surrounding communities.</p>
+          </div>
+          
+          <div class="area-card">
+            <span class="material-icons">location_city</span>
+            <h3>Greer</h3>
+            <p>Professional remodeling services for residential and commercial properties in Greer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ===== CALL TO ACTION SECTION ===== -->
+    <!-- Primary conversion section for lead generation -->
+    <CtaSection background="image" />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  /* ===== HOMEPAGE-SPECIFIC STYLES ===== */
+  
+  /* Portfolio Preview Section */
+  .homepage-portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+  
+  .portfolio-item {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+  }
+  
+  .portfolio-item:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+  }
+  
+  .portfolio-image {
+    height: 200px;
+    background: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .portfolio-placeholder {
+    font-size: 4rem;
+    color: var(--text-light);
+    opacity: 0.5;
+  }
+  
+  .portfolio-content {
+    padding: var(--space-lg);
+  }
+  
+  .portfolio-content h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-sm);
+    font-size: 1.25rem;
+  }
+  
+  .portfolio-content p {
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+  }
+  
+  .project-type {
+    display: block;
+    background: var(--accent-gold);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  /* Service Areas Section */
+  .homepage-service-areas .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+  }
+  
+  .area-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+  }
+  
+  .area-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+  
+  .area-card .material-icons {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-md);
+  }
+  
+  .area-card h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+  }
+  
+  .area-card p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    
+    .areas-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    
+    
+    .services-description {
+      font-size: 1rem;
+    }
+  }
+</style>

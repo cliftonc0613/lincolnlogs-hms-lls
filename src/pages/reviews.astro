@@ -1,0 +1,391 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroDefault from '../components/HeroDefault.astro';
+import DefaultBreadcrumb from '../components/DefaultBreadcrumb.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+
+// Import GSAP for animations
+---
+
+<Layout 
+  title="Customer Reviews | Upstate Home Remodel Testimonials"
+  description="Read customer reviews and testimonials for Upstate Home Remodel. See what homeowners say about Jeffery Lincoln's carpentry, plumbing, electrical, and remodeling services."
+  keywords="customer reviews, testimonials, home remodeling reviews, Jeffery Lincoln reviews, Upstate South Carolina contractor, satisfied customers"
+>
+  <Navigation />
+  
+  <main>
+    <!-- ===== REVIEWS HERO SECTION ===== -->
+    <!-- Customer testimonials and reviews overview -->
+    <HeroDefault 
+      title="Customer Reviews & Testimonials"
+      subtitle="Our Satisfied Customers"
+      description="Don't just take our word for it. Read what homeowners throughout Upstate South Carolina have to say about their experience with Jeffery Lincoln and Upstate Home Remodel."
+    />
+    
+    <!-- ===== BREADCRUMB NAVIGATION ===== -->
+    <!-- Page navigation breadcrumb -->
+    <DefaultBreadcrumb currentPage="Reviews" />
+    
+    <!-- ===== REVIEW STATISTICS SECTION ===== -->
+    <!-- Key statistics and performance metrics -->
+    <section class="review-stats-section section py-16" style="background: var(--light-gray);">
+      <div class="container text-center">
+        <div class="review-summary">
+          <div class="summary-stat">
+            <div class="stat-number" data-target="50" data-suffix="+">0+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-number">
+              <span class="stat-stars" data-target="5">0</span>
+              <span class="material-icons">star</span>
+            </div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+          <div class="summary-stat">
+            <div class="stat-number" data-target="100" data-suffix="%">0%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Customer Testimonials -->
+    <section class="testimonials-section section">
+      <div class="container">
+        <div class="testimonials-grid">
+          <TestimonialCard 
+            name="Sarah M."
+            service="Kitchen Remodeling"
+            projectType="Complete Kitchen Renovation"
+            rating={5}
+            content="Jeffery transformed our outdated kitchen into a beautiful, functional space that exceeded our expectations. His attention to detail and quality craftsmanship is outstanding. The custom cabinets he built are absolutely perfect, and the whole project was completed on time and within budget. We couldn't be happier with the results!"
+          />
+          
+          <TestimonialCard 
+            name="Michael R."
+            service="Bathroom Renovation"
+            projectType="Master Bathroom Remodel"
+            rating={5}
+            content="Our master bathroom renovation was handled with complete professionalism from start to finish. Jeffery's expertise in both plumbing and tile work really showed. He helped us design a layout that maximized our space and created a spa-like atmosphere we love. Highly recommend for any bathroom project!"
+          />
+          
+          <TestimonialCard 
+            name="Jennifer L."
+            service="General Home Improvement"
+            projectType="Whole House Updates"
+            rating={5}
+            content="We hired Jeffery for multiple projects throughout our home including flooring, trim work, and electrical updates. His versatility and skill in different trades saved us from coordinating multiple contractors. Every aspect of his work was done with precision and care. A true professional who takes pride in his craft."
+          />
+          
+          <TestimonialCard 
+            name="David K."
+            service="Electrical Work"
+            projectType="Panel Upgrade & Lighting"
+            rating={5}
+            content="Jeffery upgraded our electrical panel and installed new lighting throughout our home. His knowledge of electrical codes and safety standards gave us complete confidence in his work. The new LED lighting he installed has transformed our home's ambiance while reducing our energy costs. Excellent service!"
+          />
+          
+          <TestimonialCard 
+            name="Lisa H."
+            service="Plumbing Services"
+            projectType="Emergency Plumbing Repair"
+            rating={5}
+            content="When we had a plumbing emergency, Jeffery responded quickly and fixed the problem efficiently. His diagnostic skills saved us from what could have been a much more expensive repair. He explained everything clearly and made sure we understood how to prevent future issues. Very reliable and trustworthy!"
+          />
+          
+          <TestimonialCard 
+            name="Robert T."
+            service="Custom Carpentry"
+            projectType="Built-in Entertainment Center"
+            rating={5}
+            content="The custom built-in entertainment center Jeffery created for our living room is absolutely beautiful. His carpentry skills are exceptional - every joint is perfect and the finish work is flawless. He worked with us to design something that perfectly fit our space and style. A true craftsman!"
+          />
+          
+          <TestimonialCard 
+            name="Amanda C."
+            service="Deck Construction"
+            projectType="Outdoor Deck & Railing"
+            rating={5}
+            content="Our new deck has become our favorite part of the house! Jeffery's construction is solid and the design perfectly complements our home. He paid attention to every detail, from the foundation to the finishing touches. The quality materials and workmanship ensure this deck will last for years to come."
+          />
+          
+          <TestimonialCard 
+            name="James W."
+            service="Basement Finishing"
+            projectType="Complete Basement Renovation"
+            rating={5}
+            content="Jeffery turned our unfinished basement into a beautiful family room that we use every day. His expertise in framing, electrical, and flooring made the entire process smooth. He handled all the permits and inspections, making it stress-free for us. The finished space exceeded our expectations!"
+          />
+          
+          <TestimonialCard 
+            name="Karen S."
+            service="Kitchen & Bath Remodel"
+            projectType="Two-Room Renovation"
+            rating={5}
+            content="We hired Jeffery to renovate both our kitchen and guest bathroom simultaneously. His project management skills kept everything on schedule despite the complexity. The quality of work in both rooms is outstanding, and his suggestions for improving the layouts were spot-on. A consummate professional!"
+          />
+        </div>
+      </div>
+    </section>
+    
+    <!-- Review Categories -->
+    <section class="review-categories section" style="background: var(--light-gray);">
+      <div class="container">
+        <div class="text-center mb-xl">
+          <h2>What Customers Love About Our Work</h2>
+          <p class="section-subtitle">Common themes in our customer feedback</p>
+        </div>
+        
+        <div class="grid why-choose-grid">
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">star</span>
+            </div>
+            <h3 class="feature-card__title">Quality Craftsmanship</h3>
+            <p>"Exceptional attention to detail and superior workmanship in every project."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 95% of reviews</span>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">schedule</span>
+            </div>
+            <h3 class="feature-card__title">Reliable & On-Time</h3>
+            <p>"Consistently meets deadlines and keeps projects on schedule."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 92% of reviews</span>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">handshake</span>
+            </div>
+            <h3 class="feature-card__title">Professional Service</h3>
+            <p>"Clear communication, honest pricing, and respectful interaction."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 98% of reviews</span>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">build</span>
+            </div>
+            <h3 class="feature-card__title">Skilled Expertise</h3>
+            <p>"Knowledgeable in multiple trades with problem-solving abilities."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 90% of reviews</span>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">lightbulb</span>
+            </div>
+            <h3 class="feature-card__title">Creative Solutions</h3>
+            <p>"Innovative ideas that improve functionality and aesthetics."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 87% of reviews</span>
+            </div>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <span class="material-icons">home</span>
+            </div>
+            <h3 class="feature-card__title">Exceeds Expectations</h3>
+            <p>"Results that surpass what customers thought was possible."</p>
+            <div class="category-stats">
+              <span class="stat">Mentioned in 94% of reviews</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <CtaSection 
+      title="Ready to Join Our Satisfied Customers?"
+      background="gradient"
+    />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  // Register ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Animate stat numbers when they come into view
+    const statNumbers = document.querySelectorAll('.stat-number[data-target], .stat-stars[data-target]');
+    
+    statNumbers.forEach(stat => {
+      const element = stat as HTMLElement;
+      const target = parseInt(element.dataset.target || '0');
+      const suffix = element.dataset.suffix || '';
+      const isStar = stat.classList.contains('stat-stars');
+      
+      // Set initial value
+      if (isStar) {
+        element.textContent = '0';
+      } else {
+        element.textContent = '0' + suffix;
+      }
+      
+      // Create animation
+      gsap.to(stat, {
+        duration: 2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: stat,
+          start: "top 80%",
+          once: true
+        },
+        onUpdate: function() {
+          const currentValue = Math.floor(this.progress() * target);
+          if (isStar) {
+            element.textContent = currentValue.toString();
+          } else {
+            element.textContent = currentValue.toString() + suffix;
+          }
+        },
+        onComplete: function() {
+          if (isStar) {
+            element.textContent = target.toString();
+          } else {
+            element.textContent = target.toString() + suffix;
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .review-summary {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+  }
+  
+  .summary-stat {
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-brown);
+    line-height: 1;
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+  }
+  
+  .stat-number .material-icons {
+    font-size: 3rem !important;
+    color: var(--accent-gold);
+  }
+  
+  .stat-label {
+    color: var(--text-light);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+  }
+  
+  .category-card {
+    background: var(--white);
+    padding: var(--space-xl);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all var(--transition-normal);
+  }
+  
+  .category-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+  }
+  
+  .category-icon {
+    margin-bottom: var(--space-lg);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .category-icon .material-icons {
+    font-size: 4rem !important;
+    color: var(--secondary-brown);
+  }
+  
+  .category-card h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+  }
+  
+  .category-card p {
+    color: var(--text-primary);
+    font-style: italic;
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+  }
+  
+  .category-stats {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--light-gray);
+  }
+  
+  .stat {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .review-summary {
+      gap: var(--space-lg);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+    }
+    
+    .stat-number .material-icons {
+      font-size: 2.5rem !important;
+    }
+    
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    
+    
+    .category-card {
+      padding: var(--space-lg);
+    }
+  }
+</style>

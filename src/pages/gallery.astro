@@ -1,0 +1,609 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroDefault from '../components/HeroDefault.astro';
+import DefaultBreadcrumb from '../components/DefaultBreadcrumb.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+
+// Ensure global CSS is included
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Home Remodeling Projects | Before & After Gallery | Upstate Home Remodel"
+  description="View our gallery of completed home remodeling projects including kitchen renovations, bathroom remodels, carpentry work, and complete home transformations in Upstate South Carolina."
+  keywords="home remodeling gallery, before and after photos, kitchen renovations, bathroom remodels, carpentry projects, Upstate South Carolina, Jeffery Lincoln projects"
+>
+  <Navigation />
+  
+  <main>
+    <!-- ===== GALLERY HERO SECTION ===== -->
+    <!-- Showcasing our completed home improvement projects -->
+    <HeroDefault 
+      title="Project Gallery"
+      subtitle="Our Completed Work"
+      description="Browse our collection of successful home remodeling projects throughout Upstate South Carolina. Each project demonstrates our commitment to quality craftsmanship and customer satisfaction."
+    />
+    
+    <!-- ===== BREADCRUMB NAVIGATION ===== -->
+    <!-- Page navigation breadcrumb -->
+    <DefaultBreadcrumb currentPage="Gallery" />
+    
+    <!-- Gallery Filters -->
+    <section class="gallery-filters">
+      <div class="container">
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="kitchen">Kitchen Remodels</button>
+          <button class="filter-btn" data-filter="bathroom">Bathroom Renovations</button>
+          <button class="filter-btn" data-filter="carpentry">Carpentry Projects</button>
+          <button class="filter-btn" data-filter="electrical">Electrical Work</button>
+          <button class="filter-btn" data-filter="plumbing">Plumbing Projects</button>
+          <button class="filter-btn" data-filter="complete">Complete Renovations</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Project Gallery -->
+    <section class="project-gallery section">
+      <div class="container">
+        <div class="gallery-grid" id="gallery-container">
+          
+          <!-- Kitchen Projects -->
+          <div class="project-card" data-category="kitchen">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Kitchen Before/After<br/>Photos Coming Soon</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Modern Kitchen Renovation</h3>
+              <p class="project-type">Kitchen Remodeling</p>
+              <p class="project-description">Complete kitchen transformation featuring custom cabinets, quartz countertops, and modern appliances.</p>
+              <div class="project-features">
+                <span class="feature-tag">Custom Cabinets</span>
+                <span class="feature-tag">Quartz Countertops</span>
+                <span class="feature-tag">Appliance Installation</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="kitchen">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Kitchen Renovation<br/>Before/After</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Traditional Kitchen Update</h3>
+              <p class="project-type">Kitchen Remodeling</p>
+              <p class="project-description">Classic kitchen design with custom cabinetry, tile backsplash, and improved lighting.</p>
+              <div class="project-features">
+                <span class="feature-tag">Custom Cabinetry</span>
+                <span class="feature-tag">Tile Backsplash</span>
+                <span class="feature-tag">LED Lighting</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Bathroom Projects -->
+          <div class="project-card" data-category="bathroom">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Bathroom Renovation<br/>Before/After</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Master Bathroom Spa Retreat</h3>
+              <p class="project-type">Bathroom Renovation</p>
+              <p class="project-description">Luxurious master bathroom with walk-in shower, soaking tub, and custom vanity.</p>
+              <div class="project-features">
+                <span class="feature-tag">Walk-in Shower</span>
+                <span class="feature-tag">Soaking Tub</span>
+                <span class="feature-tag">Custom Vanity</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="bathroom">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Guest Bathroom<br/>Renovation</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Guest Bathroom Makeover</h3>
+              <p class="project-type">Bathroom Renovation</p>
+              <p class="project-description">Small bathroom maximized with smart storage solutions and modern fixtures.</p>
+              <div class="project-features">
+                <span class="feature-tag">Space Optimization</span>
+                <span class="feature-tag">Modern Fixtures</span>
+                <span class="feature-tag">Storage Solutions</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Carpentry Projects -->
+          <div class="project-card" data-category="carpentry">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Custom Built-ins<br/>Project Photos</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Living Room Built-ins</h3>
+              <p class="project-type">Custom Carpentry</p>
+              <p class="project-description">Floor-to-ceiling entertainment center with custom storage and display areas.</p>
+              <div class="project-features">
+                <span class="feature-tag">Built-in Entertainment Center</span>
+                <span class="feature-tag">Custom Storage</span>
+                <span class="feature-tag">Display Shelving</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="carpentry">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Deck Construction<br/>Project Photos</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Outdoor Deck & Pergola</h3>
+              <p class="project-type">Deck Construction</p>
+              <p class="project-description">Multi-level deck with integrated pergola and custom railing system.</p>
+              <div class="project-features">
+                <span class="feature-tag">Multi-level Design</span>
+                <span class="feature-tag">Pergola Integration</span>
+                <span class="feature-tag">Custom Railings</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Electrical Projects -->
+          <div class="project-card" data-category="electrical">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Electrical Panel<br/>Upgrade Photos</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Whole House Electrical Upgrade</h3>
+              <p class="project-type">Electrical Services</p>
+              <p class="project-description">Complete electrical panel upgrade with new circuits and code compliance updates.</p>
+              <div class="project-features">
+                <span class="feature-tag">Panel Upgrade</span>
+                <span class="feature-tag">New Circuits</span>
+                <span class="feature-tag">Code Compliance</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="electrical">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Lighting Installation<br/>Project Photos</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Landscape Lighting System</h3>
+              <p class="project-type">Electrical Services</p>
+              <p class="project-description">Complete outdoor lighting system with timers and energy-efficient LED fixtures.</p>
+              <div class="project-features">
+                <span class="feature-tag">Outdoor Lighting</span>
+                <span class="feature-tag">Timer Controls</span>
+                <span class="feature-tag">LED Fixtures</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Plumbing Projects -->
+          <div class="project-card" data-category="plumbing">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Water Heater<br/>Installation</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Tankless Water Heater Installation</h3>
+              <p class="project-type">Plumbing Services</p>
+              <p class="project-description">Energy-efficient tankless water heater installation with updated gas lines.</p>
+              <div class="project-features">
+                <span class="feature-tag">Tankless System</span>
+                <span class="feature-tag">Gas Line Update</span>
+                <span class="feature-tag">Energy Efficient</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="plumbing">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Kitchen Plumbing<br/>Installation</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Kitchen Island Plumbing</h3>
+              <p class="project-type">Plumbing Services</p>
+              <p class="project-description">New plumbing installation for kitchen island sink and dishwasher connections.</p>
+              <div class="project-features">
+                <span class="feature-tag">Island Plumbing</span>
+                <span class="feature-tag">Sink Installation</span>
+                <span class="feature-tag">Dishwasher Connection</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Complete Renovation Projects -->
+          <div class="project-card" data-category="complete">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Whole House<br/>Renovation</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Historic Home Restoration</h3>
+              <p class="project-type">Complete Renovation</p>
+              <p class="project-description">Full restoration of historic home including structural, electrical, plumbing, and finish work.</p>
+              <div class="project-features">
+                <span class="feature-tag">Historic Restoration</span>
+                <span class="feature-tag">Structural Work</span>
+                <span class="feature-tag">Complete Systems</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card" data-category="complete">
+            <div class="project-image">
+              <div class="placeholder-image">
+                <span class="placeholder-text">Basement Finishing<br/>Project</span>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Basement Family Room</h3>
+              <p class="project-type">Complete Renovation</p>
+              <p class="project-description">Unfinished basement transformed into comfortable family entertainment space.</p>
+              <div class="project-features">
+                <span class="feature-tag">Basement Finishing</span>
+                <span class="feature-tag">Family Room</span>
+                <span class="feature-tag">Entertainment Area</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Project Process -->
+    <section class="project-process section" style="background: var(--light-gray);">
+      <div class="container text-center">
+        <h2>Our Project Approach</h2>
+        <p class="section-subtitle">How we deliver exceptional results for every project</p>
+        
+        <div class="process-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <span class="material-icons">assignment</span>
+            </div>
+            <h3>Initial Consultation</h3>
+            <p>We start with a detailed consultation to understand your vision, needs, and budget for the project.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <span class="material-icons">architecture</span>
+            </div>
+            <h3>Design & Planning</h3>
+            <p>Careful planning and design work ensures your project meets building codes and your expectations.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <span class="material-icons">construction</span>
+            </div>
+            <h3>Expert Execution</h3>
+            <p>Professional craftsmanship using quality materials brings your project to life on schedule.</p>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <span class="material-icons">task_alt</span>
+            </div>
+            <h3>Quality Completion</h3>
+            <p>Final inspection and cleanup ensures your complete satisfaction with the finished project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <CtaSection background="image" />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(function(btn) {
+          btn.classList.remove('active');
+        });
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        const filter = button.getAttribute('data-filter');
+        
+        projectCards.forEach(function(card) {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'block';
+            setTimeout(function() {
+              card.style.opacity = '1';
+              card.style.transform = 'scale(1)';
+            }, 10);
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'scale(0.8)';
+            setTimeout(function() {
+              card.style.display = 'none';
+            }, 300);
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .gallery-filters {
+    background: var(--white);
+    padding: var(--space-lg) 0;
+    box-shadow: var(--shadow-sm);
+    top: 80px;
+    z-index: 100;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    background: var(--light-gray);
+    color: var(--text-primary);
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    font-size: 0.9rem;
+  }
+  
+  .filter-btn:hover {
+    background: var(--secondary-brown);
+    color: var(--white);
+  }
+  
+  .filter-btn.active {
+    background: var(--accent-gold);
+    color: var(--white);
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+  }
+  
+  .project-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .project-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-8px);
+  }
+  
+  .project-image {
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--light-gray) 0%, #e0e0e0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed var(--secondary-brown);
+  }
+  
+  .placeholder-text {
+    color: var(--text-light);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  
+  .project-info {
+    padding: var(--space-xl);
+  }
+  
+  .project-title {
+    color: var(--primary-brown);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+  }
+  
+  .project-type {
+    color: var(--accent-gold);
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .project-description {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .project-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+  
+  .feature-tag {
+    background: var(--light-gray);
+    color: var(--text-light);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+  
+  .timeline-item {
+    text-align: center;
+    position: relative;
+  }
+  
+  .timeline-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .timeline-icon .material-icons {
+    font-size: 2.5rem !important;
+    color: var(--white);
+  }
+  
+  .timeline-item h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-md);
+    font-size: 1.25rem;
+  }
+  
+  .timeline-item p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .gallery-cta {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
+    color: var(--white);
+  }
+  
+  .gallery-cta h2 {
+    color: var(--white);
+    margin-bottom: var(--space-md);
+  }
+  
+  .cta-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xl);
+    opacity: 0.9;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: var(--space-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .btn--large {
+    padding: var(--space-btn-large-v) var(--space-btn-large-h);
+    font-size: 1.125rem;
+    min-width: 200px;
+  }
+  
+  .cta-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-tabs {
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding-bottom: var(--space-sm);
+    }
+    
+    .filter-btn {
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    
+    .project-info {
+      padding: var(--space-lg);
+    }
+    
+    .process-timeline {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    
+    .timeline-icon {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .timeline-icon .material-icons {
+      font-size: 2rem !important;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .btn--large {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>

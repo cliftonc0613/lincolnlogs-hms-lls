@@ -1,0 +1,151 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  description?: string;
+  backgroundImage?: string;
+}
+
+const { 
+  title,
+  subtitle,
+  description,
+  backgroundImage = "/images/home-construction-tools-renovation.jpg"
+} = Astro.props;
+---
+
+<section class="hero-default">
+  <div class="hero-background">
+    <img 
+      src={backgroundImage} 
+      alt={`${title} - Upstate Home Remodel`}
+      class="hero-image"
+      loading="eager"
+    />
+    <div class="hero-overlay"></div>
+  </div>
+  
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-text">
+        {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+        <h1 class="hero-title">{title}</h1>
+        {description && <p class="hero-description">{description}</p>}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-default {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(101, 67, 33, 0.8) 0%,
+      rgba(139, 69, 19, 0.7) 50%,
+      rgba(160, 82, 45, 0.6) 100%
+    );
+  }
+  
+  .hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 800px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  /* Hero Text Styles */
+  .hero-text {
+    color: var(--white);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-sm);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--white);
+    opacity: 0.9;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .hero-default {
+      min-height: 70vh;
+      padding-top: 6em !important;
+    }
+    
+    .hero-content {
+      text-align: center;
+    }
+    
+    .hero-title {
+      font-size: clamp(2rem, 6vw, 2.5rem);
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+    
+  }
+</style>

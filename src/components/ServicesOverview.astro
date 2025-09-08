@@ -1,0 +1,93 @@
+---
+import ServiceCard from './ServiceCard.astro';
+---
+
+<section class="services-overview section py-16">
+  <div class="container">
+    <div class="text-center mb-xl">
+      <h2>Our Professional Services</h2>
+      <p class="section-subtitle">Comprehensive home improvement solutions for Upstate South Carolina homeowners</p>
+      <p class="services-description">From custom carpentry to complete renovations, Jeffery Lincoln delivers expert craftsmanship with over 15 years of experience in residential and commercial projects throughout the region.</p>
+    </div>
+    
+    <div class="grid grid--4">
+      <ServiceCard 
+        title="Carpentry Services"
+        description="Expert carpentry work including custom cabinets, trim work, flooring, and built-in solutions for your home."
+        icon="build"
+        services={[
+          'Custom cabinets and built-ins',
+          'Trim work and molding',
+          'Deck and fence construction', 
+          'Flooring installation',
+          'Custom shelving solutions',
+          'Door and window installation'
+        ]}
+        href="/services#carpentry"
+      />
+      
+      <ServiceCard 
+        title="Plumbing Services"
+        description="Complete plumbing solutions from fixture installations to emergency repairs, ensuring reliable water systems."
+        icon="plumbing"
+        services={[
+          'Bathroom renovations',
+          'Kitchen plumbing installations',
+          'Fixture installations and repairs',
+          'Water heater service',
+          'Pipe repairs and replacements',
+          'Emergency plumbing services'
+        ]}
+        href="/services#plumbing"
+      />
+      
+      <ServiceCard 
+        title="Electrical Services"
+        description="Safe and professional electrical work including panel upgrades, lighting design, and code compliance."
+        icon="electrical_services"
+        services={[
+          'Electrical panel upgrades',
+          'Lighting installations',
+          'Outlet and switch installations',
+          'Ceiling fan installations',
+          'Electrical troubleshooting',
+          'Code compliance upgrades'
+        ]}
+        href="/services#electrical"
+      />
+      
+      <ServiceCard 
+        title="General Remodel"
+        description="Complete home renovation projects from kitchens and bathrooms to whole house transformations."
+        icon="home_repair_service"
+        services={[
+          'Complete kitchen renovations',
+          'Bathroom remodeling',
+          'Basement finishing',
+          'Room additions',
+          'Whole house renovations',
+          'Commercial improvements'
+        ]}
+        href="/services#general"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .services-description {
+    max-width: 800px;
+    margin: var(--space-lg) auto 0;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+</style>

@@ -1,0 +1,198 @@
+---
+// TestimonialCard component for displaying customer reviews
+export interface Props {
+  name: string;
+  service: string;
+  content: string;
+  rating: number;
+  projectType?: string;
+  profileImage?: string;
+}
+
+const { name, service, content, rating, projectType, profileImage } = Astro.props;
+
+// Generate star display
+const stars = Array.from({ length: 5 }, (_, i) => i < rating ? '★' : '☆');
+---
+
+<div class="testimonial-card">
+  <!-- Quote icon top-left and stars top-right -->
+  <div class="card-header">
+    <div class="quote-icon">
+      <span class="material-icons">format_quote</span>
+    </div>
+    <div class="rating">
+      <div class="stars" aria-label={`${rating} out of 5 stars`}>
+        {stars.map(star => <span class={star === '★' ? 'star-filled' : 'star-empty'}>{star}</span>)}
+      </div>
+    </div>
+  </div>
+  
+  <!-- Testimonial text in center -->
+  <div class="testimonial-content">
+    <p>{content}</p>
+  </div>
+  
+  <!-- Author section at bottom -->
+  <div class="author-section">
+    <div class="profile-image">
+      {profileImage ? (
+        <img src={profileImage} alt={`${name} profile`} />
+      ) : (
+        <span class="avatar-text">{name.charAt(0)}</span>
+      )}
+    </div>
+    <div class="author-info">
+      <h4 class="author-name">{name}</h4>
+      <p class="author-role">{projectType || service}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .testimonial-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-gray);
+  }
+  
+  .testimonial-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  
+  /* Header with quote icon and stars */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .quote-icon {
+    color: var(--accent-gold);
+    opacity: 0.7;
+    transform: scaleX(-1);
+  }
+  
+  .quote-icon .material-icons {
+    font-size: 4rem !important;
+  }
+  
+  .rating {
+    flex-shrink: 0;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 2px;
+    font-size: 1.125rem;
+  }
+  
+  .star-filled {
+    color: var(--accent-gold);
+  }
+  
+  .star-empty {
+    color: var(--light-gray);
+  }
+  
+  /* Testimonial content in center */
+  .testimonial-content {
+    flex: 1;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .testimonial-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-style: italic;
+    margin: 0;
+  }
+  
+  /* Author section at bottom */
+  .author-section {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--light-gray);
+  }
+  
+  .profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--accent-gold), var(--hover-gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-text {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .author-info {
+    flex: 1;
+  }
+  
+  .author-name {
+    color: var(--primary-brown);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+  }
+  
+  .author-role {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-card {
+      padding: var(--space-lg);
+    }
+    
+    .profile-image {
+      width: 40px;
+      height: 40px;
+    }
+    
+    .avatar-text {
+      font-size: 1rem;
+    }
+    
+    .testimonial-content p {
+      font-size: 0.95rem;
+    }
+    
+    .author-name {
+      font-size: 1rem;
+    }
+    
+    .author-role {
+      font-size: 0.85rem;
+    }
+  }
+</style>

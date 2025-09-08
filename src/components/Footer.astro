@@ -1,0 +1,143 @@
+---
+// Footer component for Upstate Home Remodel
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__content">
+      <div class="footer__section">
+        <img src="/images/logo/SVG/lincolnlogs-hms-horz-white-logo.svg" alt="LincolnLogs Handyman Services Logo" />
+        <p>Your trusted home improvement professionals serving Upstate South Carolina. Quality workmanship, reliable service, and customer satisfaction guaranteed.</p>
+        <div class="footer__contact">
+          <p><strong>Jeffery Lincoln, Owner</strong></p>
+          <p>Licensed & Insured</p>
+        </div>
+      </div>
+      
+      <div class="footer__section">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="/services#carpentry">Carpentry Services</a></li>
+          <li><a href="/services#plumbing">Plumbing Services</a></li>
+          <li><a href="/services#electrical">Electrical Services</a></li>
+          <li><a href="/services#general">General Remodeling</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer__section">
+        <h4>Contact Info</h4>
+        <div class="footer__contact-info">
+          <p class="contact-phone">
+            <a href="tel:+18646083326" class="phone-link">
+              <span class="material-icons">phone</span> (864) 608-3326
+            </a>
+          </p>
+          <p class="contact-area">
+            <span class="material-icons">location_on</span> Serving Upstate South Carolina
+          </p>
+          <p class="contact-website">
+            <span class="material-icons">language</span> <a href="https://lincolnlogshms.com">www.lincolnlogshms.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer__bottom">
+      <p>&copy; {currentYear} Upstate Home Remodel. All rights reserved. | Owned and operated by Jeffery Lincoln</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer__section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer__section li {
+    margin-bottom: var(--space-sm);
+  }
+  
+  .footer__section li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .footer__section a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+  
+  .footer__section a:hover {
+    color: var(--accent-gold);
+  }
+  
+  .footer__contact-info .phone-link {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    text-decoration: none;
+  }
+  
+  .footer__contact-info .phone-link:hover {
+    color: var(--white);
+  }
+  
+  .contact-phone,
+  .contact-area,
+  .contact-website {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+  
+  .contact-website a {
+    color: var(--accent-gold);
+  }
+  
+  .footer__contact {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--secondary-brown);
+  }
+  
+  .footer__contact p {
+    margin-bottom: var(--space-sm);
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .footer__contact p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .footer__content {
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+    
+    .footer__section {
+      text-align: center;
+    }
+    
+    .contact-phone,
+    .contact-area,
+    .contact-website {
+      justify-content: center;
+    }
+  }
+</style>

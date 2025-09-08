@@ -1,0 +1,110 @@
+---
+import ServiceCardNew from './ServiceCardNew.astro';
+
+export interface Props {
+  showTitle?: boolean;
+}
+
+const { showTitle = true } = Astro.props;
+---
+<section class="creative-cards style-one">
+		<div class="container">
+      {showTitle && (
+			<div class="text-center mb-xl">
+			  <h2>Our Professional Services</h2>
+			  <p class="section-subtitle">Comprehensive home improvement solutions for Upstate South Carolina homeowners</p>
+			  <p class="services-description">From custom carpentry to complete renovations, Jeffery Lincoln delivers expert craftsmanship with over 15 years of experience in residential and commercial projects throughout the region.</p>
+			</div>
+      )}
+			<div class="row">
+				<div class="card-column">
+					<ServiceCardNew
+						iconName="build"
+						title="Carpentry Services"
+						description="Expert carpentry work including custom cabinets, trim work, flooring, and built-in solutions for your home."
+						href="/services#carpentry"
+					/>
+				</div>
+				<div class="card-column">
+					<ServiceCardNew
+						iconName="plumbing"
+						title="Plumbing Services"
+						description="Complete plumbing solutions from fixture installations to emergency repairs, ensuring reliable water systems."
+						href="/services#plumbing"
+					/>
+				</div>
+				<div class="card-column">
+					<ServiceCardNew
+						iconName="electrical_services"
+						title="Electrical Services"
+						description="Safe and professional electrical work including panel upgrades, lighting design, and code compliance."
+						href="/services#electrical"
+					/>
+				</div>
+				<div class="card-column">
+					<ServiceCardNew
+						iconName="home_repair_service"
+						title="General Remodel"
+						description="Complete home renovation projects from kitchens and bathrooms to whole house transformations."
+						href="/services#general"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+<style>
+* {
+	box-sizing: border-box;
+}
+.creative-cards{
+    padding: 120px 0;
+    position: relative;
+}
+.creative-cards .container {
+    max-width: 1320px;
+    width: 100%;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+.creative-cards .container .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 25%;
+    text-align: center;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* ============= Responsive Ipad ==================== */
+@media (max-width: 992px) {
+ .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 40px;
+}
+}
+
+/* ============= Responsive Iphone ==================== */
+@media (max-width: 480px) {
+ .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.card-details{
+    width: 100%;
+}
+.read-more-btn{
+        transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+}
+}
+</style>

@@ -1,0 +1,628 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import HeroDefault from '../components/HeroDefault.astro';
+import DefaultBreadcrumb from '../components/DefaultBreadcrumb.astro';
+import ServiceOverviewNew from '../components/ServiceOverviewNew.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Footer from '../components/Footer.astro';
+
+// Ensure global CSS is included
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Home Remodeling Services | Carpentry, Plumbing, Electrical | Upstate SC"
+  description="Complete home remodeling services including carpentry, plumbing, electrical work, and general renovation by Jeffery Lincoln in Upstate South Carolina."
+  keywords="carpentry services, plumbing services, electrical services, general remodeling, home renovation, Upstate South Carolina, professional contractor"
+>
+  <Navigation />
+  
+  <main>
+    <!-- ===== SERVICES HERO SECTION ===== -->
+    <!-- Introduction to all home improvement services offered -->
+    <HeroDefault 
+      title="Our Professional Services"
+      subtitle="Complete Home Solutions"
+      description="From custom carpentry to complete home renovations, Jeffery Lincoln and Upstate Home Remodel provides expert craftsmanship and reliable service across all aspects of home improvement."
+    />
+    
+    <!-- ===== BREADCRUMB NAVIGATION ===== -->
+    <!-- Page navigation breadcrumb -->
+    <DefaultBreadcrumb currentPage="Services" />
+    <ServiceOverviewNew showTitle={false} />
+    
+    <!-- Carpentry Services Section: Detailed carpentry services and capabilities -->
+    <section id="carpentry" class="service-section section py-16">
+      <div class="container">
+        <div class="service-header">
+          <div class="service-icon">
+            <span class="material-icons">build</span>
+          </div>
+          <div class="service-header-content">
+            <h2>Carpentry Services</h2>
+            <p class="service-intro">Expert carpentry work including custom cabinets, trim work, flooring, and built-in solutions tailored to your home's unique needs.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid--2">
+          <div class="service-details">
+            <h3>What We Offer</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Custom Cabinets and Built-ins</h4>
+                  <p>Handcrafted storage solutions designed to maximize space and match your home's style.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Trim Work and Molding Installation</h4>
+                  <p>Precision trim work that adds elegance and character to any room.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Deck and Fence Construction</h4>
+                  <p>Outdoor living spaces and privacy solutions built to last in all weather conditions.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Flooring Installation and Repair</h4>
+                  <p>Hardwood, laminate, and tile flooring installed with precision and care.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Custom Shelving and Storage Solutions</h4>
+                  <p>Organized storage systems that improve functionality and reduce clutter.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Door and Window Installation</h4>
+                  <p>Professional installation for improved energy efficiency and security.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-benefits">
+            <h3>Why Choose Our Carpentry Services?</h3>
+            <div class="benefit-card">
+              <h4>Expert Craftsmanship</h4>
+              <p>Precision work with attention to detail that ensures lasting quality and beauty.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Custom Solutions</h4>
+              <p>Every project is tailored to your specific needs, style, and space requirements.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Quality Materials</h4>
+              <p>We use only premium materials that stand the test of time and daily use.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Plumbing Services Section: Complete plumbing installation and repair services -->
+    <section id="plumbing" class="service-section section py-16" style="background: var(--light-gray);">
+      <div class="container">
+        <div class="service-header">
+          <div class="service-icon">
+            <span class="material-icons">plumbing</span>
+          </div>
+          <div class="service-header-content">
+            <h2>Plumbing Services</h2>
+            <p class="service-intro">Complete plumbing solutions from fixture installations to emergency repairs, ensuring reliable water systems throughout your home.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid--2">
+          <div class="service-details">
+            <h3>What We Offer</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Bathroom Renovations and Plumbing</h4>
+                  <p>Complete bathroom plumbing for renovations, from rough-in to fixture installation.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Kitchen Plumbing Installations</h4>
+                  <p>Professional installation of sinks, faucets, and appliance connections.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Fixture Installations and Repairs</h4>
+                  <p>Expert installation and repair of toilets, sinks, faucets, and other fixtures.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Water Heater Installation and Service</h4>
+                  <p>Professional water heater installation, maintenance, and repair services.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Pipe Repairs and Replacements</h4>
+                  <p>Reliable repair and replacement of water lines, drain lines, and pipe systems.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Emergency Plumbing Services</h4>
+                  <p>Prompt response for urgent plumbing issues to minimize water damage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-benefits">
+            <h3>Why Choose Our Plumbing Services?</h3>
+            <div class="benefit-card">
+              <h4>Licensed Professional</h4>
+              <p>Fully licensed plumbing work that meets all local codes and regulations.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Reliable Solutions</h4>
+              <p>Dependable repairs and installations that prevent future problems.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Emergency Response</h4>
+              <p>Available for urgent plumbing issues to protect your home from water damage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Electrical Services Section: Professional electrical installation and safety work -->
+    <section id="electrical" class="service-section section py-16">
+      <div class="container">
+        <div class="service-header">
+          <div class="service-icon">
+            <span class="material-icons">electrical_services</span>
+          </div>
+          <div class="service-header-content">
+            <h2>Electrical Services</h2>
+            <p class="service-intro">Safe and professional electrical work including panel upgrades, lighting design, and code compliance for your peace of mind.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid--2">
+          <div class="service-details">
+            <h3>What We Offer</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Electrical Panel Upgrades</h4>
+                  <p>Modern electrical panels to meet increased power demands safely and efficiently.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Lighting Installations and Design</h4>
+                  <p>Interior and exterior lighting solutions that enhance your home's beauty and functionality.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Outlet and Switch Installations</h4>
+                  <p>Additional outlets, switches, and GFCI installations for convenience and safety.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Ceiling Fan Installations</h4>
+                  <p>Professional ceiling fan installation for improved comfort and energy efficiency.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Electrical Troubleshooting and Repairs</h4>
+                  <p>Diagnosis and repair of electrical issues to restore safe, reliable power.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Code Compliance and Safety Upgrades</h4>
+                  <p>Electrical updates to meet current codes and improve home safety.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-benefits">
+            <h3>Why Choose Our Electrical Services?</h3>
+            <div class="benefit-card">
+              <h4>Safety First</h4>
+              <p>All work performed to the highest safety standards with proper code compliance.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Licensed Electrician</h4>
+              <p>Professional electrical work performed by a licensed and experienced electrician.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Modern Solutions</h4>
+              <p>Up-to-date electrical systems that meet modern power needs and efficiency standards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- General Remodel Section: Complete home renovation and remodeling projects -->
+    <section id="general" class="service-section section py-16" style="background: var(--light-gray);">
+      <div class="container">
+        <div class="service-header">
+          <div class="service-icon">
+            <span class="material-icons">home_repair_service</span>
+          </div>
+          <div class="service-header-content">
+            <h2>General Remodel</h2>
+            <p class="service-intro">Complete home renovation projects from kitchens and bathrooms to whole house transformations that exceed your expectations.</p>
+          </div>
+        </div>
+        
+        <div class="grid grid--2">
+          <div class="service-details">
+            <h3>What We Offer</h3>
+            <div class="service-list">
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Complete Kitchen Renovations</h4>
+                  <p>Full kitchen remodels including design, cabinets, countertops, and appliance installation.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Bathroom Remodeling Projects</h4>
+                  <p>Comprehensive bathroom renovations from layout design to final finishing touches.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Basement Finishing</h4>
+                  <p>Transform unfinished basements into functional living spaces for your family.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Room Additions and Expansions</h4>
+                  <p>Add space and value to your home with professional room additions and expansions.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Whole House Renovations</h4>
+                  <p>Complete home transformations that modernize and improve your entire living space.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <span class="service-bullet">
+                  <span class="material-icons">check_circle</span>
+                </span>
+                <div>
+                  <h4>Commercial Property Improvements</h4>
+                  <p>Professional renovation services for commercial properties and business spaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="service-benefits">
+            <h3>Why Choose Our Remodeling Services?</h3>
+            <div class="benefit-card">
+              <h4>Complete Solutions</h4>
+              <p>Full-service remodeling from design consultation to final cleanup and inspection.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Project Management</h4>
+              <p>Coordinated project management ensures timely completion and quality results.</p>
+            </div>
+            <div class="benefit-card">
+              <h4>Value Enhancement</h4>
+              <p>Strategic improvements that increase your home's value and improve your quality of life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Service Process -->
+    <section class="service-process section">
+      <div class="container text-center">
+        <h2>Our Service Process</h2>
+        <p class="section-subtitle">How we deliver exceptional results for every project</p>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Consultation</h3>
+              <p>We start with a thorough consultation to understand your needs, preferences, and budget.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Planning & Design</h3>
+              <p>Detailed planning and design work ensures your project meets your vision and expectations.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Professional Execution</h3>
+              <p>Expert craftsmanship and quality materials bring your project to life on schedule.</p>
+            </div>
+          </div>
+          
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Final Inspection</h3>
+              <p>Thorough inspection and cleanup ensures your complete satisfaction with the finished project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section: Primary conversion section for service inquiries and estimates -->
+    <CtaSection 
+      title="Ready to Start Your Home Improvement Project?"
+      subtitle="Contact Jeffery Lincoln today for a free consultation and estimate"
+      background="image"
+      backgroundImage="/images/handyman-workbench.webp"
+    />
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .service-section {
+    scroll-margin-top: 100px;
+  }
+  
+  .service-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .service-icon {
+    font-size: 4rem;
+    background: linear-gradient(135deg, var(--accent-gold), var(--hover-gold));
+    color: var(--white);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    flex-shrink: 0;
+  }
+  
+  .service-header-content h2 {
+    margin-bottom: var(--space-md);
+  }
+  
+  .service-intro {
+    font-size: 1.125rem;
+    color: var(--text-primary);
+    line-height: 1.6;
+  }
+  
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .service-item {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+  }
+  
+  .service-bullet {
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  
+  .service-item h4 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-sm);
+    font-size: 1.125rem;
+  }
+  
+  .service-item p {
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+  
+  .service-benefits h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+  }
+  
+  .benefit-card {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--space-lg);
+    border-left: 4px solid var(--accent-gold);
+  }
+  
+  .benefit-card:last-child {
+    margin-bottom: 0;
+  }
+  
+  .benefit-card h4 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-sm);
+  }
+  
+  .benefit-card p {
+    color: var(--text-primary);
+    margin-bottom: 0;
+    line-height: 1.6;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+  
+  .process-step {
+    text-align: center;
+  }
+  
+  .step-number {
+    width: 80px;
+    height: 80px;
+    background: var(--accent-gold);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto var(--space-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .step-content h3 {
+    color: var(--primary-brown);
+    margin-bottom: var(--space-md);
+  }
+  
+  
+  @media (max-width: 768px) {
+    .service-header {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      font-size: 3rem;
+    }
+    
+    .process-steps {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+  }
+</style>
