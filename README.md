@@ -1,10 +1,10 @@
-# Upstate Home Remodel Website
+# LincolnLogs Handyman Services Website
 
-A modern, responsive website for Upstate Home Remodel, built with Astro and featuring professional home improvement services throughout Upstate South Carolina.
+A modern, responsive website for LincolnLogs Handyman Services, built with Astro and featuring professional home improvement services throughout Upstate South Carolina.
 
 ## 🏠 About
 
-**Upstate Home Remodel** is owned and operated by **Jeffery Lincoln**, a licensed and insured contractor specializing in:
+**LincolnLogs Handyman Services** is owned and operated by **Jeffery Lincoln**, a licensed and insured contractor specializing in:
 
 - **Carpentry & Custom Woodwork** - Custom cabinets, built-ins, trim work, and finish carpentry
 - **Kitchen & Bathroom Renovations** - Complete remodels and updates
@@ -175,7 +175,7 @@ dist/
 ## 📞 Contact Information
 
 **Jeffery Lincoln**  
-Upstate Home Remodel  
+LincolnLogs Handyman Services  
 Phone: (864) 608-3326  
 Email: info@lincolnlogshms.com  
 Available 7 days a week, emergency service 24/7
@@ -186,7 +186,7 @@ Available 7 days a week, emergency service 24/7
 **Company:** CT Web Design Shop  
 **Website:** https://ctwebdesignshop.com/
 
-CT Web Design Shop specializes in creating modern, responsive websites for small businesses and contractors. This Upstate Home Remodel website showcases custom web development using cutting-edge technologies like Astro, focusing on performance, SEO, and user experience.
+CT Web Design Shop specializes in creating modern, responsive websites for small businesses and contractors. This LincolnLogs Handyman Services website showcases custom web development using cutting-edge technologies like Astro, focusing on performance, SEO, and user experience.
 
 ### Services Offered:
 - Custom Website Development
