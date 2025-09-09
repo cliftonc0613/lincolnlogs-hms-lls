@@ -1,10 +1,10 @@
 ---
-// Navigation component for Upstate Home Remodel
+// Navigation component for LincolnLogs Handyman Services
 ---
 
 <header class="header">
   <nav class="nav container">
-    <a href="/" class="nav__logo"><img src="/images/logo/SVG/lincolnlogs-hms-horz-logo.svg" alt="LincolnLogs Handyman Services Logo" /></a>
+    <a href="/" class="nav__logo"><img src="/images/logo/SVG/lincolnlogs-hms-horz-logo.svg" alt="LincolnLogs Handyman Services Logo" class="logo" /></a>
     
     <ul class="nav__menu" role="menubar">
       <li role="none">
@@ -37,3 +37,13 @@
     </button>
   </nav>
 </header>
+
+<style>
+  @media (max-width: 767px) {
+    img.logo {
+      width: 65vw;
+      height: auto;
+      max-width: 200px;
+    }
+  }
+</style>

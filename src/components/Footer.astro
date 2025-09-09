@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear();
   <div class="container">
     <div class="footer__content">
       <div class="footer__section">
-        <img src="/images/logo/SVG/lincolnlogs-hms-horz-white-logo.svg" alt="LincolnLogs Handyman Services Logo" />
+        <img src="/images/logo/SVG/lincolnlogs-hms-horz-white-logo.svg" alt="LincolnLogs Handyman Services Logo" class="logo" />
         <p>Your trusted home improvement professionals serving Upstate South Carolina. Quality workmanship, reliable service, and customer satisfaction guaranteed.</p>
         <div class="footer__contact">
           <p><strong>Jeffery Lincoln, Owner</strong></p>
@@ -61,6 +61,10 @@ const currentYear = new Date().getFullYear();
 </footer>
 
 <style>
+  img.logo {
+    margin-bottom: 1rem;
+  }
+  
   .footer__section ul {
     list-style: none;
     padding: 0;
